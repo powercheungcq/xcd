@@ -1,0 +1,11 @@
+<form bindsubmit="formSubmit">
+    <view bindtap="cellClick" class="flex-wrp">
+        <text class="titleText titleTextHasWidth">修改预约时间</text>
+        <view class="cell_view">
+            <input class="orderFocusrtime" disabled="true" name="startTime" placeholder="点击预约" value="{{dateStr}}"></input>
+        </view>
+    </view>
+    <yycalendar beginTime="{{beginTime}}" bind:yybindchange="_yybindchange" bind:yybindhide="_yybindhide" calendarType="{{calendarType}}" endTime="{{endTime}}" show="{{isShow}}" showOverdue="{{showOverdue}}" themeColor="{{themeColor}}" timeGap="{{timeGap}}"></yycalendar>
+    <view class="lineView"></view>
+    <button class="btnjs" formType="submit">确定</button>
+</form>

@@ -1,0 +1,51 @@
+<view class="container">
+    <view class="nickName">
+        <text class="titleText">分享我的人</text>
+        <view class="real">
+            <text class="lefttext">{{fname}} </text>
+        </view>
+    </view>
+    <view class="avatar twoHeight">
+        <text class="titleText">头像</text>
+        <view class="real">
+            <image bindtap="chooseimage" class="n"></image>
+            <image class="a" src="{{userInfoAvatar}}"></image>
+        </view>
+    </view>
+    <view class="nickName">
+        <text class="titleText">名字</text>
+        <view class="real">
+            <text class="lefttext"> {{nickName}}</text>
+        </view>
+    </view>
+    <view class="sex">
+        <text class="titleText">性别</text>
+        <view class="real" wx:for="{{userlist}}">
+            <text class="lefttext" wx:if="{{item.sex==1}}">男</text>
+            <text class="lefttext" wx:if="{{item.sex==0}}">女</text>
+        </view>
+    </view>
+    <view wx:if="{{userlist}}" wx:for="{{userlist}}">
+        <view class="area">
+            <text class="titleText">收货地址</text>
+            <view class="real">
+                <text class="lefttext">{{item.address}}</text>
+            </view>
+        </view>
+        <view class="area">
+            <text class="titleText">手机号</text>
+            <view class="real">
+                <text class="lefttext">{{item.tel}}</text>
+            </view>
+        </view>
+        <view class="area">
+            <text class="titleText">E-mail</text>
+            <view class="real">
+                <text class="lefttext">{{item.email}}</text>
+            </view>
+        </view>
+        <view bindtap="xiugaibtn" class="xiugai">
+            <button>完善资料</button>
+        </view>
+    </view>
+</view>

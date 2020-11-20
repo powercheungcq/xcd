@@ -1,0 +1,75 @@
+button {
+    margin-top: 10rpx;
+    background-color: rgb(255,223,62);
+    width: 100%;
+}
+
+.card {
+    padding: 10rpx 2.5% 10rpx 2.5%;
+    margin-left: 2.5%;
+    height: 70rpx;
+    background: white;
+    border-bottom: 1rpx solid #cccccc;
+}
+
+.card>view {
+    float: left;
+    height: 100%;
+    line-height: 70rpx;
+    font-size: 27rpx;
+    text-align: center;
+}
+
+.fiexdbox {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.7);
+    position: fixed;
+    left: 0;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.fiexdbox>view {
+    width: 80%;
+    height: 260rpx;
+    background-color: white;
+    font-size: 32rpx;
+    text-align: center;
+    padding: 10rpx 0 10rpx 0;
+    position: relative;
+    border-radius: 15rpx;
+}
+
+.fiexdbox>view view {
+    position: absolute;
+    right: 30rpx;
+    top: 10rpx;
+}
+
+.fiexdbox>view input {
+    border: 1px solid black;
+    width: 70%;
+    margin: 30rpx auto;
+}
+
+.fiexdbox>view button {
+    width: 40%;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin: auto;
+}
+
+.padding_bottom {
+    padding-bottom: 240rpx;
+}
+
+.bottombox {
+    height: 200rpx;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+}

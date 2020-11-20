@@ -1,0 +1,20 @@
+<form bindsubmit="formSubmit" reportSubmit="true">
+    <view>
+        <image bindload="imageLoads" src="{{staticImgUrl}}chosecarmap.png" style="width:{{imgwidth4}}rpx; height:{{imgheight4}}rpx; margin-top:300rpx; margin-left:165rpx;" wx:if="{{staticImgUrl}}"></image>
+    </view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText titleTextHasWidth">车辆位置</text>
+        </view>
+        <view>
+            <input bindtap="popMap" class="orderFocus" name="carAddress" onpaste="return false;" placeholder="请点击选择车辆地址" readonly="false" value="{{location.name}}"></input>
+            <input class="orderFocus" name="openid" placeholder="用户id测试" style="display:none" value="{{userInfo.openid}}"></input>
+            <input class="orderFocus" name="cityid" placeholder="城市id测试" style="display:none" value="{{adcode}}"></input>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view wx:if="{{adcode}}">
+        <button class="orderBTN" formType="submit">下一步</button>
+    </view>
+    <view class="lineView"></view>
+</form>

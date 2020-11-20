@@ -1,0 +1,32 @@
+<view class="card">
+    <view style="width:40%;"> 秘钥</view>
+    <view style="width:20%;">金额</view>
+    <view style="width:20%;">状态</view>
+    <view style="width:20%;">赠送</view>
+</view>
+<view class="padding_bottom">
+    <view class="card" wx:for="{{mytopup}}">
+        <view bindtap="copysecret" data-checked="{{item.code}}" style="width:40%;"> {{item.code}}</view>
+        <view style="width:20%;">{{item.money}}</view>
+        <view style="width:20%;">{{item.usetime?'已使用':'未使用'}}</view>
+        <view style="width:20%;">
+            <checkbox-group bindchange="checkboxChange" data-id="{{item.id}}" data-index="{{index}}">
+                <checkbox checked="{{item.is_send?true:false}}" disabled="{{item.usetime?true:false}}"></checkbox>
+            </checkbox-group>
+        </view>
+    </view>
+</view>
+<view class="bottombox">
+    <navigator url="/pages/member/topup/topup">
+        <button>去购买充值卡</button>
+    </navigator>
+    <button bindtap="clicksecrettrue">验证秘钥充值</button>
+</view>
+<view class="fiexdbox" wx:if="{{secretflag}}">
+    <view>
+        <text>请输入秘钥</text>
+        <input bindinput="bindKeyInput"></input>
+        <button bindtap="validation">验证</button>
+        <view bindtap="clicksecretfalse">X</view>
+    </view>
+</view>

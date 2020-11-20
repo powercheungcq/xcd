@@ -1,0 +1,23 @@
+<text>暂不开放</text>
+<view class="myPackage">
+    <view class="packageList" wx:for="{{arr}}">
+        <view class="top"></view>
+        <view class="bottom"></view>
+        <view class="left">
+            <view>
+                <text class="price" name="couponsPrice1" value="¥{{item.couponsPrice1}}"></text>
+            </view>
+            <view>
+                <text name="price2" value="满{{item.couponsPrice2}}可用"></text>
+            </view>
+            <view class="orderconfirm oneHeight">
+                <text bindtap="reductionbtn" class="titleText" data-id="{{item.couponsId}}" id="{{item.couponsId}}">立即使用</text>
+            </view>
+        </view>
+        <view class="right">
+            <view>{{item.couponsTitle}}</view>
+            <view class="time">有效期至{{getid}}</view>
+            <view class="phone">{{item.couponsLimits}}</view>
+        </view>
+    </view>
+</view>

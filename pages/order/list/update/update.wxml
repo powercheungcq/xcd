@@ -1,0 +1,29 @@
+<view class="modify-form">
+    <form bindsubmit="formSubmit" wx:for="{{userlist}}">
+        <view class="label-list" wx:if="{{item.address}}">
+            <view class="label">收货地址</view>
+            <input name="address" value="{{item.address}}"></input>
+        </view>
+        <view class="label-list" wx:else>
+            <view class="label">收货地址</view>
+            <input name="address" placeholder="请输入您的收货地址" value="{{item.address}}"></input>
+        </view>
+        <view class="label-list" wx:if="{{item.tel}}">
+            <text class="label" decode="{{true}}">手&nbsp;&nbsp;机&nbsp;&nbsp;号</text>
+            <input name="tel" value="{{item.tel}}"></input>
+        </view>
+        <view class="label-list" wx:else>
+            <text class="label" decode="{{true}}">手&nbsp;&nbsp;机&nbsp;&nbsp;号</text>
+            <input name="tel" placeholder="请输入您的电话号码" value="{{item.tel}}"></input>
+        </view>
+        <view class="label-list" wx:if="{{item.email}}">
+            <text class="label" decode="{{true}}">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</text>
+            <input name="email" value="{{item.email}}"></input>
+        </view>
+        <view class="label-list" wx:else>
+            <text class="label" decode="{{true}}">邮&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;箱</text>
+            <input name="email" placeholder="请输入您的E-mail" value=""></input>
+        </view>
+        <button class="submit" formType="submit">确定修改</button>
+    </form>
+</view>

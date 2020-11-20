@@ -1,0 +1,102 @@
+.orderArea {
+    padding: 0rpx 10rpx;
+}
+
+.submitOrder {
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #666;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 2rpx solid #ddd;
+    width: 100%;
+}
+
+.sf {
+    width: 70%;
+    color: #fff;
+    line-height: 120rpx;
+    display: flex;
+    justify-content: center;
+}
+
+.price {
+    font-size: 40rpx;
+}
+
+.submit {
+    padding: 32rpx;
+    background: #ffe400;
+}
+
+.padding {
+    padding-bottom: 120rpx;
+}
+
+.ordermain {
+    margin-top: 10rpx;
+}
+
+.ordermain .orderCarModel {
+    display: flex;
+    align-items: center;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.ordermain .orderCarModel .titleText {
+    margin-left: 10rpx;
+}
+
+.orderbottom {
+    float: right;
+    margin-right: 25rpx;
+    margin-top: 20rpx;
+}
+
+.orderbottom .titleText {
+    display: flex;
+    float: right;
+    width: 200rpx;
+    height: 50rpx;
+    border: 1px solid #ccc;
+    border-radius: 20rpx;
+    margin-right: 20rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderCartime .contentText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10rpx;
+}
+
+.flex-wrp {
+    display: flex;
+    padding: 5rpx 0rpx;
+}
+
+.balance {
+    margin-left: 65rpx;
+}
+
+.topUp {
+    margin-left: 250rpx;
+}
+
+.mebtop {
+    margin-top: 20rpx;
+}
+
+.textright {
+    text-align: right;
+}
+
+.shopwidth {
+    width: 150rpx;
+}

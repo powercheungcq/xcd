@@ -1,0 +1,76 @@
+<view wx:for="{{orderlist}}">
+    <view catchtap="goDeatailEvent" class="orderArea">
+        <view class="oneHeight flex-wrpcate">
+            <view class="col6 flex-wrpcate orderCarModel" wx:for="{{cardetails}}">
+                <view class="textwidth">
+                    <text class="titleText">车牌：</text>
+                </view>
+                <view>
+                    <text class="contentText">{{item.carNumber}}</text>
+                </view>
+            </view>
+            <view class="col3" wx:for="{{cardetails}}">
+                <text class="titleText">车型：<text class="contentText">{{item.carModel}}</text>
+                </text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">服务内容：</text>
+            </view>
+            <view>
+                <text class="contentText">{{item.orderSever}}+{{item.newOtherServer}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">总价：</text>
+            </view>
+            <view>
+                <text class="contentText">￥{{item.fprice}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">汽车位置：</text>
+            </view>
+            <view>
+                <text class="contentText">{{item.carAddress}}-{{item.orderCarAddress}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">预约时间：</text>
+            </view>
+            <view>
+                <text class="contentText">{{item.startTime}}
+      </text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">下单时间：</text>
+            </view>
+            <view>
+                <text class="contentText">{{item.orderTime}}
+      </text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText">备注:</text>
+            </view>
+            <view>
+                <text class="contentText" wx:if="{{item.orderOther==''}}">无</text>
+                <text class="contentText" wx:else>{{item.orderOther}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class=" weui-btn-area">
+        <view class="total">
+            <text>实付:￥{{item.fprice}}(已优惠{{yhprice}})</text>
+        </view>
+        <text bindtap="createProductOrderByWX" class="btnjs" disabled="{{btnDisabled}}" formType="submit" id="wxPay" type="primary">立即支付</text>
+    </view>
+</view>

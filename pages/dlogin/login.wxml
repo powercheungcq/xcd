@@ -1,0 +1,9 @@
+<view>
+    <image bindload="imageLoads" src="{{staticImgUrl}}loginBG.png" style="width:{{imgwidth1}}rpx; height:{{imgheight1}}rpx; margin-top:110rpx; margin-left:195rpx;" wx:if="{{staticImgUrl}}"></image>
+</view>
+<view>
+    <view class="title">
+        <text class="contentText ">请完成微信授权以继续使用</text>
+    </view>
+    <button bindgetuserinfo="bindGetUserInfo" class="orderBTN" openType="getUserInfo">获取用户信息</button>
+</view>

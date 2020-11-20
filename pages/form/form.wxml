@@ -1,0 +1,8 @@
+<form bindsubmit="formSubmit" reportSubmit="true">
+    <view class="title">
+        <text class="contentText ">请点击跳转到代理申请页面</text>
+    </view>
+    <button class="titleText" formType="submit" size="mini">
+        <text class="titleText1">确定</text>
+    </button>
+</form>

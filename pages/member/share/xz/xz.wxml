@@ -1,0 +1,67 @@
+<form bindsubmit="increase">
+    <view bindtap="powerDrawer2" class="flex-wrp" data-statu="open">
+        <view>
+            <text class="titleText">车牌</text>
+        </view>
+        <view class="flex-item">
+            <input class="orderFocus" disabled="false" name="carNumber" value="{{currCarNumber}}"></input>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText">车型</text>
+        </view>
+        <view>
+            <radio-group bindchange="modelbtn" class="flex-wrp cxing" name="carModel">
+                <label class="flex-wrp" wx:for="{{carModel}}">
+                    <view>
+                        <radio value="{{item.modelName}}"></radio>
+                    </view>
+                    <view>
+                        <text class="contentText">{{item.modelName}}</text>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText">品牌</text>
+        </view>
+        <view class="flex-item">
+            <input class="orderFocus" name="carBrand" placeholder="请输入你的品牌"></input>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleTextHasWidths">颜色</text>
+        </view>
+        <view>
+            <radio-group bindchange="checkboxChange" class="flex-wrpother" name="carColor">
+                <label bindtap="otherBtn" class=" flex-wrp" data-id="{{item.otherSevericeId}}" id="{{item.otherSevericeId}}" wx:for="{{colorlist}}">
+                    <view>
+                        <radio value="{{item.name}}"></radio>
+                    </view>
+                    <view>
+                        <text class="contentText">{{item.name}}</text>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class="line"></view>
+    <view class="qdzj oneHeight">
+        <button formType="submit">
+            <text class="titleText">确定增加</text>
+        </button>
+    </view>
+</form>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_content">
+        <PNInput bindsubmit="onSubmitClick" btn="下一步" desc="请输入新车牌并确认，即可添加至微信车主服务" plateNum="苏000000" title="请输入车牌"></PNInput>
+    </view>
+</view>

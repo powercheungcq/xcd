@@ -1,0 +1,17 @@
+<form bindsubmit="formSubmit">
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText xin">*</text>
+        </view>
+        <view>
+            <text class="titleText titleTextHasWidth">您的意见：</text>
+        </view>
+        <view>
+            <textarea class="textarea" name="idea" placeholder="请输入您的意见"></textarea>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="weui-btn-area">
+        <button class="btnjs" formType="submit">提交</button>
+    </view>
+</form>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="30px" viewBox="0 0 16 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.1 (57501) - http://www.bohemiancoding.com/sketch -->
+    <title>arrow down@2x</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="天天预约日历-0822" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="演示" transform="translate(-666.000000, -233.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="Group-3" transform="translate(30.000000, 168.000000)">
+                <g id="Group" transform="translate(160.000000, 30.000000)">
+                    <g id="arrow-down" transform="translate(484.000000, 50.000000) scale(1, -1) rotate(90.000000) translate(-484.000000, -50.000000) translate(468.000000, 34.000000)">
+                        <rect id="Rectangle-path" opacity="0" x="0" y="0" width="32" height="32"></rect>
+                        <path d="M14.752,23.486 L2.276,11.01 C1.586,10.32 1.586,9.204 2.276,8.514 C2.964,7.826 4.082,7.824 4.772,8.514 L16,19.742 L27.228,8.514 C27.916,7.826 29.034,7.824 29.724,8.514 C30.414,9.204 30.412,10.32 29.724,11.01 L17.248,23.486 C16.558,24.174 15.442,24.174 14.752,23.486 Z" id="Shape"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

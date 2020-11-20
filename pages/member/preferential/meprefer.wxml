@@ -1,0 +1,50 @@
+<scrollview class="" scrollX="false" scrollY="true" style="width:{{winWidth}};height:{{winHeight-1}}rpx;">
+    <view class="tit">
+        <form bindsubmit="changetab" data-id="{{item.id}}" name="fid" reportSubmit="true" wx:for="{{typeList}}">
+            <button class="on" formType="submit" type="su" wx:if="{{item.id==idx}}">{{item.name}}</button>
+            <button formType="submit" type="su" wx:else>{{item.name}}</button>
+        </form>
+    </view>
+    <view class="main">
+        <view class="list">
+            <view class="list_main">
+                <view class="list_left" wx:for="{{list}}">
+                    <view style="width:200rpx;height:275rpx;">
+                        <image src="../../../images/myyhq.png" style="width:200rpx;height:200rpx;border-radius:10rpx;margin-right:20rpx;"></image>
+                        <button bindtap="navigateToAddress" style="width:200rpx;height:70rpx;line-height: 70rpx;">点击使用</button>
+                    </view>
+                    <view class="li_all">
+                        <view class="list_name">{{item.name}}</view>
+                        <view class="li_middle">
+                            <view>
+                                <view class="list_adress">
+                                    <text>地区位置：{{item.address}}</text>
+                                </view>
+                                <view class="list_adress">
+                                    <text>优惠金额：￥{{item.price}}</text>
+                                </view>
+                                <view class="list_adress">
+                                    <text>使用状态：{{item.status_name}}</text>
+                                </view>
+                            </view>
+                            <image bindtap="binddetail" data-id="{{item.id}}" src="../../images/code.png" style="width:100rpx;height:100rpx;border-radius:10rpx;"></image>
+                        </view>
+                        <view class="list_adress">
+                            <text>到期时间：{{item.end_time}}</text>
+                        </view>
+                    </view>
+                </view>
+                <view class="list_none" wx:if="{{list.length==0}}">~暂无数据~</view>
+            </view>
+        </view>
+    </view>
+    <view bindtap="goodsfade" class="genfade" wx:if="{{goodsfade}}"></view>
+    <view style="top:5%;position:fixed;width:66%;height:auto;z-index:22;left:17%;" wx:if="{{goodsfade}}">
+        <view class="genlight {{goodsfade?'scales':'scales'}}">
+            <image showMenuByLongpress class="giimg" mode="widthFix" src="{{qrcode}}"></image>
+        </view>
+        <form bindsubmit="{{is_role?'bindcancel':'bindxuzhe'}}" name="fid" reportSubmit="true" wx:if="{{goodsfade}}">
+            <button class="xuzhe" formType="submit" openType="getUserInfo" type="su">出示给服务人员核销</button>
+        </form>
+    </view>
+</scrollview>

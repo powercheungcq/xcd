@@ -1,0 +1,31 @@
+<view class="clnr">
+    <view class="userInfo" wx:for="{{carInfo}}" wx:key="index">
+        <view class="addressList">
+            <view class="listLeft">
+                <view class="carNumber oneHeight">
+                    <text class="titleText">车牌：<text class="contentText">{{item.carNumber}}</text>
+                    </text>
+                    <text class="titleText1">车型：<text class="contentText">{{item.carModel}}</text>
+                    </text>
+                </view>
+                <image bindtap="editUserInfo" class="listRight" data-id="{{item.carId}}" id="{{item.carId}}" src="../../../images/bianji.png" style="height:80rpx; width:80rpx;"></image>
+                <view class="carModel oneHeight">
+                    <text class="titleText">品牌：<text class="contentText">{{item.carBrand}}</text>
+                    </text>
+                    <text class="titleText1">颜色：<text class="contentText">{{item.carColor}}</text>
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>
+<view>
+    <view bindtap="increase" class="new ">
+        <view class="flex-wrp oneHeight">
+            <view class="btnimg">
+                <image class="xzim" src="../../../images/xz.png"></image>
+            </view>
+            <view class="btnnew">新增车辆</view>
+        </view>
+    </view>
+</view>

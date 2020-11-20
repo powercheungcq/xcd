@@ -1,0 +1,31 @@
+<view class="main">
+    <swiper autoplay="true" circular="true" duration="{{duration}}" indicatorDots="true" interval="{{interval}}">
+        <swiper-item wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <image class="slide-image" src="{{item}}" width="100%"></image>
+        </swiper-item>
+    </swiper>
+    <navigator url="../component/cart/cart">
+        <view class="cartPage">
+            <image src="{{staticImgUrl}}guc.png" style="height:60rpx; width:60rpx;" wx:if="{{staticImgUrl}}"></image>
+        </view>
+    </navigator>
+    <view class="newest oneHeight">
+        <view class="newest-title">
+            <text class="titleText ">热销产品</text>
+        </view>
+        <view class="newest-box">
+            <view class="newest-list" wx:for="{{shopList}}">
+                <view>
+                    <image bindtap="detailsbtn" data-id="{{item.shopId}}" id="{{item.shopId}}" src="{{uploadImgUrl}}{{item.shopImg}}" wx:if="{{uploadImgUrl}}"></image>
+                </view>
+                <view class="newest-text ">
+                    <text class="titleText">{{item.shopName}} 一瓶</text>
+                </view>
+                <view class="newest-text  cartimg">
+                    <text class="contentText ">￥{{item.shopPrice}}</text>
+                    <image bindtap="confirmbtn" data-id="{{item.shopId}}" id="{{item.shopId}}" src="{{staticImgUrl}}icon_cart.png" style=" height:40rpx; width:40rpx; padding-left:20rpx;margin-top:-10rpx;" wx:if="{{staticImgUrl}}"></image>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

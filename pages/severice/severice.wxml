@@ -1,0 +1,113 @@
+<view>
+    <view catchtap="goDeatailEvent" class="orderArea">
+        <view class="oneHeight flex-wrpcate">
+            <view class="col6 flex-wrpcate orderCarModel">
+                <view class="textwidth">
+                    <text class="titleText" decode="{{true}}">车&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;牌</text>
+                </view>
+                <view>
+                    <text class="contentText">{{formData.carNumber}}</text>
+                </view>
+            </view>
+            <view class="col4" wx:if="{{item.carNumber==formData.carNumber}}" wx:for="{{carlist}}">
+                <text class="titleText">车型<text class="contentText" decode="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{item.carModel}}</text>
+                </text>
+            </view>
+        </view>
+        <view class="flex-wrpcate" wx:if="{{sevlist!==''}}">
+            <view class="textwidth">
+                <text class="titleText">服务内容</text>
+            </view>
+            <view class="weizhi">
+                <text class="contentText" decode="{{true}}">{{serviceName}}
+{{sevlist}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate" wx:else>
+            <view class="textwidth">
+                <text class="titleText">服务内容</text>
+            </view>
+            <view>
+                <text class="contentText">{{serviceName}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText" decode="{{true}}">联系方式</text>
+            </view>
+            <view>
+                <text class="contentText" wx:if="{{formData.userName!==''}}">{{formData.userName}}{{formData.sex}} {{formData.phone}}</text>
+                <text class="contentText" wx:if="{{formData.userName==''}}">{{formData.phone}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText" decode="{{true}}">优惠信息</text>
+            </view>
+            <view>
+                <text class="contentText">{{coupon_info}}</text>
+            </view>
+        </view>
+        <view class="flex-wrpcate" wx:if="{{formData.address!==''}}">
+            <view class="textwidth">
+                <text class="titleText">汽车位置</text>
+            </view>
+            <view class="weizhi">
+                <text class="contentText" decode="{{true}}">{{formData.carAddress}}
+{{formData.address}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate" wx:else>
+            <view class="textwidth">
+                <text class="titleText">汽车位置</text>
+            </view>
+            <view>
+                <text class="contentText">{{formData.carAddress}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrpcate">
+            <view class="textwidth">
+                <text class="titleText" decode="{{true}}">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</text>
+            </view>
+            <view>
+                <text class="contentText" wx:if="{{formData.other==''}}">无</text>
+                <text class="contentText" wx:else>{{formData.other}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view wx:if="{{kyye>0}}">
+        <checkbox-group bindchange="washbtn" class="">
+            <label class="flex-wrp">
+                <view class="oneHeight">
+                    <checkbox value="1"></checkbox>
+                </view>
+                <view class="oneHeight">
+                    <text class="titleText">使用我的收益支付</text>
+                </view>
+                <view class="balance oneHeight">
+                    <text class="contentText">可用余额：{{kyye}}</text>
+                </view>
+            </label>
+        </checkbox-group>
+    </view>
+    <view wx:if="{{kyye==0}}">
+        <checkbox-group bindchange="washbtn2" class="">
+            <label class="flex-wrp">
+                <view class="oneHeight">
+                    <checkbox disabled="true" value="1"></checkbox>
+                </view>
+                <view class="oneHeight">
+                    <text class="titleText">使用分享收益支付</text>
+                </view>
+                <view class="balance oneHeight">
+                    <text class="contentText">可用余额：{{kyye}}</text>
+                </view>
+            </label>
+        </checkbox-group>
+    </view>
+    <view class=" weui-btn-area">
+        <text bindtap="createProductOrderByWX" class="btnjs" decode="{{true}}" disabled="{{btnDisabled}}" formType="submit" id="wxPay" type="primary">微信支付&nbsp;&nbsp;<text class="moeny">￥{{jiage}}</text>
+        </text>
+    </view>
+</view>

@@ -1,0 +1,185 @@
+<form bindsubmit="formSubmit" reportSubmit="true">
+    <view bindtap="powerDrawer" class="flex-wrp" data-statu="open">
+        <view>
+            <text class="titleText xin">*</text>
+        </view>
+        <view>
+            <text class="titleText titleTextHasWidth">选择车辆</text>
+        </view>
+        <view>
+            <input class="orderFocusxz" disabled="false" id="choosedCar" name="carNumber" value="{{currCarNumber}}"></input>
+        </view>
+        <view class="flex-wrp" wx:if="{{washlist==''||washlist==null}}">
+            <view>
+                <text class="contentText price">{{sname}}</text>
+            </view>
+            <view>
+                <text class="contentTextjg price">￥0</text>
+            </view>
+        </view>
+        <view class="flex-wrp" wx:else>
+            <view>
+                <text class="contentText price">{{washlist.serviceName}}</text>
+            </view>
+            <view>
+                <text class="contentTextjg price" wx:if="{{isvip>0}}">￥{{gdprice}}(vip)</text>
+                <text class="contentTextjg price" wx:else>￥{{gdprice}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText titleTextHasWidths">附加服务  <text class="contentText">(可选填)</text>
+            </text>
+        </view>
+        <view>
+            <checkbox-group bindchange="checkboxChange" class="flex-wrpother" name="severId">
+                <label bindtap="otherBtn" class=" flex-wrp" data-id="{{item.otherSevericeId}}" id="{{item.otherSevericeId}}" wx:for="{{otherlist}}">
+                    <view>
+                        <checkbox value="{{item.otherSevericePrice}}"></checkbox>
+                    </view>
+                    <view class=" flex-wrp fjiafuwu">
+                        <view>
+                            <text class="contentText">{{item.otherSevericeName}}</text>
+                        </view>
+                        <view>
+                            <text class="contentTextjgs">￥{{item.otherSevericePrice}}</text>
+                        </view>
+                    </view>
+                </label>
+            </checkbox-group>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <form bindsubmit="saveSubmit">
+        <view class="flex-wrp" style="margin-top:20rpx;">
+            <view>
+                <text class="titleText xinss" style="color:red;">*</text>
+            </view>
+            <view>
+                <text class="titleText titleTextHasWidthxcds" decode="{{true}}">选择优惠券</text>
+            </view>
+            <view>
+                <view class="flex-wrp">
+                    <view class="section">
+                        <picker bindchange="bindPickerChange" range="{{coupon_name_list}}" value="{{coupon_id}}">
+                            <view class="picker titleTextHasWidthxcds" style="font-size: 24rpx;color: #666">
+                {{coupon_name_list[coupon_id]}}
+              </view>
+                        </picker>
+                        <input hidden="false" name="coupon_log_id" placeholder="姓名(可不填)" value="{{coupon_log_id}}"></input>
+                        <input hidden="false" name="coupon_price" placeholder="姓名(可不填)" value="{{coupon_price}}"></input>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </form>
+    <view class="lineView"></view>
+    <form bindsubmit="saveSubmit">
+        <view class="flex-wrp" style="margin-top:20rpx;">
+            <view>
+                <text class="titleText xins">*</text>
+            </view>
+            <view>
+                <text class="titleText titleTextHasWidthxcd" decode="{{true}}">联&nbsp;系&nbsp;人</text>
+            </view>
+            <view>
+                <input class="orderFocusr" name="userName" placeholder="姓名(可不填)" value="{{uname}}"></input>
+            </view>
+            <view>
+                <radio-group class="flex-wrp" name="sex">
+                    <label class="flex-wrp" wx:for="{{sex}}">
+                        <view>
+                            <radio checked="{{item.checked}}" value="{{item.name}}"></radio>
+                        </view>
+                        <view>
+                            <text class="contentText1">{{item.name}}</text>
+                        </view>
+                    </label>
+                </radio-group>
+                <view class="flex-wrp">
+                    <view>
+                        <input class="orderFocusdh" name="phone" placeholder="请输入联系电话（必填）" type="number" value="{{telphone}}"></input>
+                    </view>
+                    <view>
+                        <button class="baocun" formType="submit">保存为常用联系人</button>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </form>
+    <view class="lineView"></view>
+    <view class="flex-wrp" style="margin-top:20rpx;">
+        <view>
+            <text class="titleText titleTextHasWidthxcd">汽车位置</text>
+        </view>
+        <view>
+            <input bindtap="popMap" class="orderFocus wzcolor" disabled="false" name="carAddress" placeholder="请点击选择车辆地址" value="{{carAddress}}"></input>
+            <input class="orderFocus" name="townid" style="display:none" value="{{townid}}"></input>
+            <view>
+                <input class="orderFocus" name="address" placeholder="精确位置填写（可不填）"></input>
+            </view>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="flex-wrp">
+        <view>
+            <text class="titleText titleTextHasWidth" decode="{{true}}">备&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;注</text>
+        </view>
+        <view style="margin-left:14rpx;">
+            <input class="orderFocus" name="other" placeholder="请输入特殊要求（可不填）"></input>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="weui-btn-area">
+        <view class="weui-btn" formType="submit" type="primary">
+            <view class="flex-wrpsettlement">
+                <view class="total">
+                    <text>总价：￥{{endprice}}<input class="orderFocus" name="totalPrice" type="text" value="{{totalPrice}}"></input>
+                        <input class="orderFocus" name="endprice" type="text" value="{{endprice}}"></input>
+                    </text>
+                </view>
+                <button class="btnjs" disabled="{{btnDisabled}}" formType="submit" type="primary">提交</button>
+            </view>
+        </view>
+    </view>
+</form>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="flex-wrp oneHeight">
+        <view class="cancel">
+            <text bindtap="powerDrawer" class="close" data-id="{{item.carid}}" data-statu="close" id="{{item.carid}}">x</text>
+        </view>
+        <view class="choose">选择车辆</view>
+    </view>
+    <view class="lineView"></view>
+    <view class="drawer_content">
+        <radio-group bindchange="radioChange">
+            <label wx:for="{{carlist}}">
+                <view bindtap="powerDrawer" class="flex-wrp" data-id="{{item.carId}}" data-statu="close" id="{{item.carId}}" value="{{item.carNumber}}">
+                    <view class="col1">
+                        <radio data-id="{{item.carId}}" id="{{item.carId}}" value="{{item.carNumber}}"></radio>
+                    </view>
+                    <view class="col6">
+                        <text class="titleTextNoWidthLimited titleText">车牌：{{item.carNumber}}</text>
+                        <text class="titleTextNoWidthLimited titleText">品牌：{{item.carBrand}}</text>
+                    </view>
+                    <view class="col6">
+                        <text class="titleTextNoWidthLimited titleText">车型：{{item.carModel}}</text>
+                        <text class="titleTextNoWidthLimited titleText">颜色：{{item.carColor}}</text>
+                    </view>
+                </view>
+                <view class="lineView"></view>
+            </label>
+        </radio-group>
+    </view>
+    <view bindtap="xinzeng" class="new" data-statu="close">
+        <view class="flex-wrpAdd">
+            <view class="btnimg">
+                <image class="xzim" src="../../../images/xz.png" style="width:80rpx; height:80rpx;"></image>
+            </view>
+            <view class="btnnew">新增车辆</view>
+        </view>
+    </view>
+</view>

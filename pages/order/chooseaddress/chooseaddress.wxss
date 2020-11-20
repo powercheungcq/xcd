@@ -1,0 +1,84 @@
+text {
+    display: flex;
+}
+
+view {
+    clear: both;
+}
+
+.titleTextHasWidth {
+    width: 140rpx;
+    line-height: 120rpx;
+    margin-left: 15rpx;
+}
+
+.titleTextNoWidthLimited {
+    line-height: 50rpx;
+    margin-left: 15rpx;
+}
+
+.orderFocus {
+    width: 500rpx;
+    height: 120rpx;
+}
+
+page {
+    background: #fff;
+}
+
+.flex-wrpAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrpsettlement {
+    display: flex;
+    background: #ffdf3e;
+}
+
+.col8 {
+    margin-left: 80rpx;
+}
+
+.commentInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputText {
+    border: 1rpx #eee solid;
+    width: 98%;
+    height: 60rpx;
+    margin: 0;
+    padding-left: 5rpx;
+}
+
+.orderBTN {
+    position: fixed;
+    background: #ffdf3e;
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    top: 70%;
+    left: 5%;
+    margin-top: 100rpx;
+    border-radius: 110rpx;
+}
+
+.biaoyu {
+    position: fixed;
+    bottom: 0%;
+}
+
+button::after {
+    border: none;
+}
+
+.ts {
+    display: block;
+    text-align: center;
+    margin-top: 75rpx;
+}

@@ -1,0 +1,361 @@
+<view class="top-tab flexItem flex-tab">
+    <view bindtap="switchTab" class="toptab flex-item {{currentNavtab==idx?'active':''}}" data-idx="{{idx}}" wx:for="{{navTab}}" wx:for-index="idx" wx:for-item="itemName">
+    {{itemName}}
+  </view>
+</view>
+<view class="tab_con flexItem rowStyle {{currentNavtab==0?'list_active0':''}} {{currentNavtab==1?'list_active1':''}} {{currentNavtab==2?'list_active2':''}} {{currentNavtab==3?'list_active3':''}} {{currentNavtab==4?'list_active4':''}}">
+    <view bindtouchstart="catchtouchstart" class="view1 width20">
+        <scroll-view class="tableView" scrollY="true" wx:if="{{item.ispay==0}}" wx:for="{{produt}}">
+            <view class="separated"></view>
+            <view class="ordercon">
+                <view class="ordermain">
+                    <view class="oredemianright">
+                        <view class="orderCarModel">
+                            <view class="col6 shopflex-wrp">
+                                <view class="textWidth">
+                                    <text class="titleText textWidth">商品名：</text>
+                                </view>
+                                <view class="textWidth">
+                                    <text class="contentText">{{item.proname}} </text>
+                                </view>
+                            </view>
+                            <view class="col6">
+                                <text class="titleText textWidth">数量：</text>
+                                <text class="contentText">{{item.pronum}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">价格：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proprice}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系人：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.username}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系电话：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userphone}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">地址：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proaddress}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">下单时间：</text>
+                            </view>
+                            <view class="">
+                                <text class="contentText">{{item.protime}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="orderconfirm oneHeight">
+                        <text bindtap="shoppay" class="titleText" data-id="{{item.proOrderId}}" id="{{item.proOrderId}}">立即付款</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtouchstart="catchtouchstart" class="view2 width20">
+        <scroll-view class="tableView" scrollY="true" wx:if="{{item.isGet==0}}" wx:for="{{produt}}">
+            <view class="separated"></view>
+            <view class="ordercon">
+                <view catchtap="goDeatailEvent" class="ordermain">
+                    <view class="oredemianright">
+                        <view class="orderCarModel">
+                            <view class="col6 shopflex-wrp">
+                                <view class="textWidth">
+                                    <text class="titleText textWidth">商品名：</text>
+                                </view>
+                                <view class="textWidth">
+                                    <text class="contentText">{{item.proName}} </text>
+                                </view>
+                            </view>
+                            <view class="col6">
+                                <text class="titleText textWidth">数量：</text>
+                                <text class="contentText">{{item.proNum}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">价格：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proPrice}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系人：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userName}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系电话：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userPhone}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">地址：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proAddress}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">下单时间：</text>
+                            </view>
+                            <view class="">
+                                <text class="contentText">{{item.protime}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="orderconfirm  oneHeight" wx:for="{{test}}">
+                        <text bindtap="calling" class="titleText textWidth" wx:if="{{item.testState==1}}">配送服务：{{item.testName}} {{item.testPhone}}
+          </text>
+                        <text bindtap="calling" class="titleText" wx:else>催单
+          </text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtouchstart="catchtouchstart" class="view3 width20">
+        <scroll-view class="tableView" scrollY="true" wx:if="{{item.isConfirm==0}}" wx:for="{{produt}}">
+            <view class="separated"></view>
+            <view class="ordercon">
+                <view catchtap="goDeatailEvent" class="ordermain">
+                    <view class="oredemianright">
+                        <view class="orderCarModel">
+                            <view class="col6 shopflex-wrp">
+                                <view class="textWidth">
+                                    <text class="titleText textWidth">商品名：</text>
+                                </view>
+                                <view class="textWidth">
+                                    <text class="contentText">{{item.proName}} </text>
+                                </view>
+                            </view>
+                            <view class="col6">
+                                <text class="titleText textWidth">数量：</text>
+                                <text class="contentText">{{item.proNum}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">价格：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proPrice}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系人：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userName}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系电话：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userPhone}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">地址：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proAddress}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">下单时间：</text>
+                            </view>
+                            <view class="">
+                                <text class="contentText">{{item.protime}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="orderconfirm oneHeight">
+                        <text class="titleText">确认收货</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+    <view bindtouchstart="catchtouchstart" class="view4 width20">
+        <scroll-view class="tableView" scrollY="true" wx:if="{{item.isEvaluation==0}}" wx:for="{{produt}}">
+            <view class="separated"></view>
+            <view class="ordercon">
+                <view catchtap="goDeatailEvent" class="ordermain">
+                    <view class="oredemianright">
+                        <view class="orderCarModel">
+                            <view class="col6 shopflex-wrp">
+                                <view class="textWidth">
+                                    <text class="titleText textWidth">商品名：</text>
+                                </view>
+                                <view class="textWidth">
+                                    <text class="contentText">{{item.proName}} </text>
+                                </view>
+                            </view>
+                            <view class="col6">
+                                <text class="titleText textWidth">数量：</text>
+                                <text class="contentText">{{item.proNum}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">价格：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proPrice}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系人：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userName}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">联系电话：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.userPhone}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">地址：</text>
+                            </view>
+                            <view class="textWidth">
+                                <text class="contentText">{{item.proAddress}}</text>
+                            </view>
+                        </view>
+                        <view class="oneHeight shopflex-wrp">
+                            <view class="textWidth">
+                                <text class="titleText textWidth">下单时间：</text>
+                            </view>
+                            <view class="">
+                                <text class="contentText">{{item.protime}}</text>
+                            </view>
+                        </view>
+                    </view>
+                    <view class="orderbottom1 oneHeight">
+                        <text bindtap="againbtn" class="titleText1 col6">再来一单</text>
+                        <text bindtap="powerDrawer" class="titleText col6" data-statu="open">立即评价</text>
+                    </view>
+                </view>
+            </view>
+        </scroll-view>
+    </view>
+</view>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_title">
+        <view class="flex-wrp">
+            <view class="cancel">
+                <text bindtap="powerDrawer" class="close" data-statu="close">x</text>
+            </view>
+            <view class="choose">产品评价</view>
+        </view>
+    </view>
+    <view class="drawer_content">
+        <view class="Block">
+            <view class="flex-wrp">
+                <view class="star fullWidth oneHeight">
+                    <view class="flex-wrp ">
+                        <view bindtap="myStarChoose" class="zan-font-16 my-ib col2">
+                            <block wx:for="{{starMap}}">
+                                <text class="zan-c-red" data-star="{{index+1}}" style="padding-right: .5em;  color: #ffdf3e; font-size:40rpx; " wx:if="{{star>=index+1}}">★</text>
+                                <text class="zan-c-gray-dark" data-star="{{index+1}}" style="padding-right: .5em;font-size:40rpx;" wx:if="{{star<index+1}}">☆</text>
+                            </block>
+                        </view>
+                        <view class="col2">
+                            <text class="zan-c-gray-dark">{{starMap[star-1]}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+            <view class="fourbutton flex-wrp">
+                <view class="clo9">
+                    <buttton class="ontime">按时到达</buttton>
+                </view>
+                <view class="clo9">
+                    <buttton class="detail">产品体验好</buttton>
+                </view>
+                <view class="clo9">
+                    <buttton class="severGood">服务态度好</buttton>
+                </view>
+            </view>
+            <view class="oneHeight flex-wrp commentInfo">
+                <input class="inputText" placeholder="请输入其他要求"></input>
+            </view>
+            <view class="Pic">
+                <view class="PicBlock" wx:if="{{imgPath2!=''}}">
+                    <image src="{{imgPath2}}"></image>
+                    <view bindtap="del" class="del" data-id="0">
+                        <text class="iconfont icon-del">删除</text>
+                    </view>
+                </view>
+                <view class="PicBlock" wx:if="{{imgPath3!=''}}">
+                    <image src="{{imgPath3}}"></image>
+                    <view bindtap="del" class="del" data-id="1">
+                        <text class="iconfont icon-del">删除</text>
+                    </view>
+                </view>
+                <view bindtap="choosePic" class="PicBlock">
+                    <image src="{{imgPath}}"></image>
+                    <view catchtap="del" class="del" data-id="2" wx:if="{{imgPath!='../../images/pic.png'}}">
+                        <text class="iconfont icon-del">删除</text>
+                    </view>
+                </view>
+                <view class="small">(最多晒3张图片)</view>
+            </view>
+        </view>
+        <view class="bottom oneHeight">
+            <text class="anonymous"> 匿名提交</text>
+        </view>
+        <view class="footer">
+            <view class="share">
+                <image src="../../images/hb.png" style="width:50rpx; height:50rpx;  margin-top:25rpx; margin-left:25rpx;"></image>
+            </view>
+            <text class="shareText">分享领红包</text>
+            <view class="go">
+                <image src="../../images/hb.png" style="width:50rpx; height:50rpx;  margin-top:25rpx; margin-left:25rpx;"></image>
+            </view>
+            <text class="goText">快领洗车券</text>
+        </view>
+    </view>
+</view>

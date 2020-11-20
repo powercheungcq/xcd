@@ -1,0 +1,71 @@
+<form bindsubmit="shopSubmit">
+    <view class="main" wx:for="{{goods}}">
+        <view class="goods-box">
+            <image class="goods-thumb" src="{{uploadImgUrl}}{{item.shopImg}}" style="width:730rpx; height:547rpx" wx:if="{{uploadImgUrl}}"></image>
+            <text class="titleText oneHeight">{{item.shopName}}</text>
+            <input name="title" style="display:none" value="{{item.shopName}}"></input>
+            <view class="viewprice">
+                <text class="titleText oneHeight">￥{{item.shopPrice}}</text>
+            </view>
+        </view>
+    </view>
+    <view class=" weui-btn-area">
+        <view bindtap="powerDrawer" class="myadd" data-statu="open">
+            <text>立即购买</text>
+        </view>
+    </view>
+    <view bindtap="homebtn" class="homePage">
+        <image src="{{staticImgUrl}}sy.png" style="height:50rpx; width:50rpx;" wx:if="{{staticImgUrl}}"></image>
+    </view>
+    <navigator url="../cart/cart">
+        <view class="cartPage">
+            <image src="{{staticImgUrl}}guc.png" style="height:60rpx; width:60rpx;" wx:if="{{staticImgUrl}}"></image>
+        </view>
+    </navigator>
+    <view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+    <view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+        <view class="flex-wrp oneHeight">
+            <view class="cancel">
+                <text bindtap="powerDrawer" class="close" data-statu="close">x</text>
+            </view>
+            <view class="choose">选择商品属性</view>
+        </view>
+        <view class="lineView"></view>
+        <view class="drawer_content">
+            <view class="flex-wrp">
+                <view>
+                    <text class="titleText titleTextHasWidth">选择商品</text>
+                </view>
+                <view>
+                    <radio-group bindchange="checkboxChange" class="flex-wrp">
+                        <label class="flex-wrp" wx:for="{{spec}}">
+                            <input name="id" style="display:none" value="{{selectId}}"></input>
+                            <view>
+                                <radio value="{{item.selectId}}"></radio>
+                            </view>
+                            <view>
+                                <text class="contentText">{{item.selectModel}}</text>
+                                <text class="contentText">{{item.selectPrice}}</text>
+                            </view>
+                        </label>
+                    </radio-group>
+                </view>
+            </view>
+            <view class="lineView"></view>
+            <view class="flex-wrp" wx:for="{{carts}}">
+                <view>
+                    <text class="titleText titleTextHasWidth">数量</text>
+                </view>
+                <view>
+                    <view class="cart-count-box flex-wrp">
+                        <text bindtap="minusCount" class="cart-count-down" data-index="{{index}}">-</text>
+                        <input class="cart-count-num" name="num" value="{{item.num}}"></input>
+                        <text bindtap="addCount" class="cart-count-add" data-index="{{index}}">+</text>
+                    </view>
+                </view>
+            </view>
+            <view class="lineView"></view>
+            <button bindtap="btnnew" class="btnnew" formType="submit">确认 </button>
+        </view>
+    </view>
+</form>

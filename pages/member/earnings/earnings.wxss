@@ -1,0 +1,90 @@
+.integralTop {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20rpx;
+    height: 200rpx;
+    background: #ffdf3e;
+    border-radius: 20rpx;
+}
+
+.mysy {
+    padding-top: 40rpx;
+    background: #ffdf3e;
+    border-radius: 20rpx;
+}
+
+.titleText {
+    display: flex;
+    justify-content: center;
+    font-size: 36rpx;
+}
+
+.integralzn,.integraldigital,.integralstore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30rpx;
+    background: #ffdf3e;
+    border-radius: 20rpx;
+}
+
+.flex-wrp {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.titleTexts {
+    display: flex;
+    justify-content: center;
+    font-size: 36rpx;
+}
+
+.contentTextts {
+    font-size: 24rpx;
+    color: #666;
+}
+
+.content {
+    margin-top: 20rpx;
+    margin-bottom: 80rpx;
+}
+
+.orderBTN {
+    position: fixed;
+    background: #ffdf3e;
+    width: 98%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    bottom: 1%;
+    left: 1%;
+    margin-top: 100rpx;
+    border-radius: 10rpx;
+}
+
+.get {
+    height: 100rpx;
+    line-height: 45rpx;
+    padding: 25rpx 10rpx 15rpx 10rpx;
+    background: #fff;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.get .titleText2 {
+    color: #ed7321;
+    font-weight: bold;
+    font-size: 30rpx;
+    position: absolute;
+    right: 20rpx;
+    margin-top: 20rpx;
+}
+
+.get .contentText {
+    font-size: 22rpx;
+    margin-left: 25rpx;
+}
+
+.get .obtain {
+    font-size: 32rpx;
+    margin-left: 25rpx;
+    color: #000;
+}

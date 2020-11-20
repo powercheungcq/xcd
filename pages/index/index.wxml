@@ -1,0 +1,115 @@
+<view class="top_s">
+    <swiper autoplay="true" bindchange="cardSwiper" circular="true" class="card-swiper square-dot" duration="500" indicatorActiveColor="#0081ff" indicatorColor="#8799a3" indicatorDots="true" interval="5000">
+        <swiper-item class="{{cardCur==index?'cur':''}}" wx:for="{{swiperList}}">
+            <view class="swiper-item">
+                <image mode="aspectFill" src="{{item.path}}"></image>
+            </view>
+        </swiper-item>
+    </swiper>
+    <image bindload="imageLoads2" class="shopcat" src="{{staticImgUrl}}banner.png" wx:if="{{staticImgUrl}}"></image>
+    <view class="callphone">
+        <view>
+            <view bindtap="tel">
+                <image src="../../images/isphone.png"></image>
+                <text>电话</text>
+            </view>
+        </view>
+        <view>
+            <view>
+                <button class="kefu" openType="contact" sessionFrom="" style="width:100rpx; height:100rpx;"></button>
+                <image src="../../images/rectangl.png"></image>
+                <text>客服</text>
+            </view>
+        </view>
+    </view>
+    <view class="category">
+        <view bindtap="golive" class="broadcast">
+            <view class="carimger t-p">
+                <image src="../../images/leftcar.png"></image>
+            </view>
+            <view class="boimgr t-p">
+                <image src="../../images/pin.png"></image>
+            </view>
+            <view class="ziduan">去看直播</view>
+            <view class="xiangxin">点击查看详情</view>
+        </view>
+        <view bindtap="orderbtn" class="broadcast">
+            <view class="carimger t-p">
+                <image src="../../images/rightcar.png"></image>
+            </view>
+            <view class="boimgr t-p">
+                <image src="../../images/xicar.png"></image>
+            </view>
+            <view class="ziduan">我要洗车</view>
+            <view class="xiangxin">点击查看详情</view>
+        </view>
+    </view>
+</view>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<view animation="{{animationData}}" class="drawer_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_content">
+        <view class="shengqing">
+            <form bindsubmit="formSubmit" reportSubmit="true">
+                <button formType="submit" hoverClass="btn-hover">
+                    <image bindload="imageLoad" src="{{uploadImgUrl}}{{imgUrls}}" style="width:{{imgwidth}}rpx; height:{{imgheight}}rpx;" wx:if="{{uploadImgUrl}}"></image>
+                </button>
+            </form>
+        </view>
+        <view bindtap="powerDrawer" class="guanbi" data-statu="close" wx:if="{{uploadImgUrl}}">
+            <image bindload="imageLoads" src="../../images/popx.png" style="width:{{imgwidth1}}rpx; height:{{imgheight1}}rpx; margin-left:25rpx;z-index:66666;"></image>
+        </view>
+    </view>
+</view>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" wx:if="{{show}}"></view>
+<view class="drawer_box" wx:if="{{show}}">
+    <view class="pop_item">
+        <view class="pop1">您还未授权电话</view>
+        <view class="pop2">为了方便洗车工与您联系，请完成手机认证，完成授权后还可以领取红包呦</view>
+        <image src="https://image.caiyunyi.com/ueditor/20190902/3aadbecc592cd467e5fc08d9e3911237.png"></image>
+        <view class="dl">
+            <button bindgetphonenumber="getPhoneNumber1" class="dl2" openType="getPhoneNumber">立即授权</button>
+        </view>
+    </view>
+</view>
+<image bindtap="showboxflag" class="showbox" src="../../images/popx.png" wx:if="{{show}}"></image>
+<view bindtap="powerDrawer" class="drawer_screen" data-statu="close" hidden="{{coupon.showcard==1?false:true}}"></view>
+<view class="drawer_box" hidden="{{coupon.showcard==1?false:true}}" style="width:100%;left:0;">
+    <view class="shengqing">
+        <button bindtap="bindling">
+            <image mode="aspectFit" src="../../images/card.png" style="width:800rpx; height:800rpx;"></image>
+        </button>
+    </view>
+    <view bindtap="bindguan" class="guanbi" style="text-align:center;">
+        <image src="../../images/close.png" style="width:63rpx; height:63rpx; text-align:center;"></image>
+    </view>
+</view>
+<view class="kqfade" wx:if="{{show3}}"></view>
+<view class="kqlight" style="background:#000000" wx:if="{{show3}}">
+    <view class="row fwc kq0">
+        <view class="kq1">
+            <image src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1571546332023&di=ed67eabb220b2d7cc28fd7d40c95098e&imgtype=jpg&src=http%3A%2F%2Fpic.ffpic.com%2Ffiles%2F2017%2F0603%2Fsl05049ut8n_s.jpg"></image>
+        </view>
+    </view>
+    <view class="row kq2">恭喜您已经领取下面的优惠券啦</view>
+    <scroll-view class="row" scrollY="true" style="max-height:336rpx">
+        <view bindtap="getcard" class="row kqs fwb" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{coupon.coupon_list}}">
+            <image class="kq3" mode="aspectFit" src="../../images/kq.png"></image>
+            <view class="kq4 fht">优惠券</view>
+            <view class="kq5 fwc">
+                <view class="kq6">{{item.price}}</view>
+                <view class="kq7"></view>
+                <view class="kq8 fhc">
+                    <text>元</text>
+                    <text class="kq9">[{{item.day}}天后到期]</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+    <view class="kqbtn pv">
+        <form bindsubmit="upaction" name="fid">
+            <button class="formbtn" formType="submit" style="background: none;line-height:25px">
+                <text>立刻使用</text>
+            </button>
+        </form>
+    </view>
+</view>

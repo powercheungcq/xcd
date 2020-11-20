@@ -1,0 +1,28 @@
+<view class="integralTop">
+    <view class="integralzn">
+        <text class="titleText">我的收益</text>
+    </view>
+    <view class="integraldigital">
+        <text class="buttonText">￥{{sy}}</text>
+    </view>
+</view>
+<view class="content">
+    <view class="get twoHeight" wx:for="{{myczlist}}">
+        <view>
+            <text class="obtain">{{item.uname}}</text>
+            <text class="titleText2">+ 0.5元</text>
+        </view>
+        <view>
+            <text class="contentText">{{item.fwtime}}</text>
+        </view>
+    </view>
+    <view class="get twoHeight" wx:for="{{mysylist}}">
+        <view>
+            <text class="obtain">{{item.uname}}</text>
+            <text class="titleText2">+ 0.5元</text>
+        </view>
+        <view>
+            <text class="contentText">{{item.fwtime}}</text>
+        </view>
+    </view>
+</view>

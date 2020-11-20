@@ -1,0 +1,24 @@
+<view class="box">
+    <view class="livebox" wx:if="{{livearr.length>0}}">
+        <text>直播中</text>
+        <view bindtap="liveclick" data-id="{{item.roomid}}" wx:for="{{livearr}}" wx:key="index">
+            <view>
+                <view class="fiexbox"></view>
+                <view class="livecodename">{{item.anchor_name}}的直播间</view>
+                <view class="livename">{{item.anchor_name}}</view>
+                <image src="{{item.cover_img}}"></image>
+            </view>
+        </view>
+    </view>
+    <view class="livebox" wx:if="{{historyarr.length>0}}">
+        <text>历史直播</text>
+        <view bindtap="liveclick" data-id="{{item.roomid}}" wx:for="{{historyarr}}" wx:key="index">
+            <view>
+                <view class="fiexbox"></view>
+                <view class="livecodename">{{item.anchor_name}}的直播间</view>
+                <view class="livename">{{item.anchor_name}}</view>
+                <image src="{{item.cover_img}}"></image>
+            </view>
+        </view>
+    </view>
+</view>

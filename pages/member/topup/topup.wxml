@@ -1,0 +1,22 @@
+<view class="topup">
+    <view>充值卡</view>
+    <view>购买数量</view>
+    <view>金额</view>
+</view>
+<view class="topup" wx:for="{{prepaidka}}">
+    <view>{{item.title}}</view>
+    <view>
+        <view class="num">
+            <view bindtap="clickjian" data-index="{{index}}" style="border-right:1px solid black;">-</view>
+            <view class="numberof">{{item.num}}</view>
+            <view bindtap="clickjia" data-index="{{index}}" style="border-left:1px solid black;">+</view>
+        </view>
+    </view>
+    <view>{{item.sale_money}} 元</view>
+</view>
+<view>
+    <view class="payment">
+		应付金额: <text>¥ {{buymoney}}</text>
+        <button bindtap="buyclick">购买</button>
+    </view>
+</view>

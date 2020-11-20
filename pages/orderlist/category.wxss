@@ -1,0 +1,652 @@
+service_selection.flexItem {
+    display: flex;
+}
+
+.floatLeft {
+    float: left;
+}
+
+.sheight {
+    line-height: 80rpx;
+    height: 80rpx;
+}
+
+.floatRight {
+    float: right;
+}
+
+button::after {
+    border: none;
+}
+
+.columnStyle {
+    flex-direction: column;
+}
+
+.rowStyle {
+    flex-direction: row;
+}
+
+.container {
+    padding: 0;
+    height: 100%;
+}
+
+.flex-wrpcate {
+    display: flex;
+    padding: 5rpx 5rpx;
+}
+
+.menu {
+    background-color: white;
+}
+
+.orderMenu {
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.line {
+    width: 36px;
+    height: 2px;
+    margin-bottom: 0;
+    margin-top: 10px;
+    margin-left: 6px;
+    background-color: #ffdf3e;
+}
+
+.orderImage {
+    width: 10px;
+    height: 11px;
+    margin-right: 5px;
+}
+
+.tableViewCellHeader {
+    margin-top: 10rpx;
+    height: 35px;
+    align-items: center;
+    border-bottom: solid #ccc 1px;
+    background-color: white;
+}
+
+.tableViewCell {
+    padding-right: 12px;
+    padding-top: 15px;
+    padding-left: 12px;
+    background-color: white;
+    border-bottom: dashed #ccc 1px;
+}
+
+tableViewCellStyle {
+    background-color: white;
+}
+
+.cellStyle {
+    justify-content: space-between;
+    align-items: center;
+    color: #ed7321;
+}
+
+.personInfo {
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: dashed #ccc 1px;
+}
+
+.top-tab {
+    width: 750rpx;
+    height: 100rpx;
+    background: white;
+    color: #545454;
+    font-size: 28rpx;
+    line-height: 100rpx;
+    box-shadow: 0 2px 2px #bebebe;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.flex-tab {
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-item {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.toptab {
+    border-bottom: solid 3px transparent;
+    transition: all 0.4s ease-in-out;
+}
+
+.toptab.active {
+    font-weight: bold;
+    color: #ed7321;
+    border-bottom: solid 3px #ed7321;
+}
+
+.tab_con {
+    height: 100%;
+    background: #f5f5f5;
+    position: relative;
+    margin-top: 100rpx;
+    width: 400%;
+    left: 0;
+    transition: all 0.4s ease-in-out;
+}
+
+.list_active0 {
+    margin-left: 0;
+}
+
+.list_active1 {
+    margin-left: -100%;
+}
+
+.list_active2 {
+    margin-left: -200%;
+}
+
+.list_active3 {
+    margin-left: -300%;
+}
+
+.width20 {
+    width: 25%;
+    overflow-x: hidden;
+}
+
+.ordercon {
+    height: 815rpx;
+    width: 97%;
+    padding: 5rpx 10rpx;
+}
+
+.yanse {
+    color: #666;
+}
+
+.orderline {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.ordermain {
+    margin-top: 15rpx;
+}
+
+.ordermain .orderCarModel {
+    display: flex;
+    align-items: center;
+}
+
+.orderCarModel {
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.orderCarAddress .titleText {
+    width: 100%;
+}
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.drawer_box {
+    width: 100%;
+    height: 820rpx;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 2001;
+    background: #fefffe;
+    border-radius: 3px;
+}
+
+.drawer_title {
+    text-align: center;
+    height: 80rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.drawer_content {
+    height: 100%;
+    position: relative;
+    overflow-y: scroll;
+}
+
+.orderconfirm .titleText {
+    background: #ffdf3e;
+    display: flex;
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 35rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.orderconfirm4 .titleText {
+    float: left;
+    background: #ffdf3e;
+    display: flex;
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 26rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.orderconfirm3 .titleText {
+    float: left;
+    background: #ffdf3e;
+    display: flex;
+    width: 45%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 26rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.orderconfirm3 .titleText1 {
+    float: left;
+    background: #ffdf3e;
+    display: flex;
+    width: 45%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 30rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.orderFocusrtime {
+    width: 80%;
+    display: flex;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #ffdf3e;
+    margin-left: 15rpx;
+    text-align: center;
+    border-radius: 10rpx;
+}
+
+.orderconfirm3 .titleText2 {
+    float: left;
+    background: #ffdf3e;
+    display: flex;
+    width: 45%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 25rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.orderbottom1 .titleText {
+    background: #ffdf3e;
+    display: flex;
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 26rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderbottom1 .titleText1 {
+    font-size: 28rpx;
+    background: #eee;
+    display: flex;
+    float: right;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-right: 20rpx;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderCartime .contentText {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.separated {
+    height: 10rpx;
+    background: #eee;
+}
+
+.zanwu {
+    width: 95%;
+    height: 300rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Block {
+    background: white;
+    padding: 15rpx 10rpx;
+    box-sizing: border-box;
+    margin-top: 10rpx;
+    width: 100%;
+}
+
+.inputText {
+    border: 1rpx #eee solid;
+    width: 99%;
+    height: 60rpx;
+    margin: 0;
+    padding-left: 5rpx;
+}
+
+.clo9 .ontime {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.clo9 .detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8rpx;
+}
+
+.clo9 .severGood {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    margin-left: 18rpx;
+}
+
+.Pic {
+    width: 100%;
+    margin-left: 10rpx;
+}
+
+.PicBlock {
+    opacity: 0.1;
+    position: relative;
+    display: inline-block;
+    margin-right: 20rpx;
+    width: 150rpx;
+    height: 150rpx;
+    background: #f2f2f2;
+}
+
+.del {
+    position: absolute;
+    background: rgba(0,0,0,.2);
+    height: 40rpx;
+    line-height: 40rpx;
+    width: 100%;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    font-size: 28rpx;
+    color: #fff;
+}
+
+.Pic image {
+    width: 100%;
+    height: 100%;
+}
+
+.small {
+    font-size: 28rpx;
+    color: #999;
+}
+
+.cancel {
+    font-size: 60rpx;
+    color: #666;
+    position: fixed;
+    left: 30rpx;
+    line-height: 60rpx;
+}
+
+.choose {
+    font-size: 36rpx;
+    color: #000;
+    position: fixed;
+    left: 50%;
+    line-height: 70rpx;
+    margin-left: -60rpx;
+}
+
+.star {
+    height: 80rpx;
+    text-align: center;
+    margin-top: -40rpx;
+}
+
+.zan-font-16 {
+    text-align: left;
+}
+
+.zan-c-gray-dark {
+    text-align: left;
+    font-size: 28rpx;
+    color: #000;
+}
+
+.bottom .anonymous {
+    width: 94%;
+    background: #ffdf3e;
+    display: flex;
+    float: left;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-right: 0rpx;
+    align-items: center;
+    justify-content: center;
+    font-size: 28rpx;
+    margin-left: 20rpx;
+}
+
+.lineView {
+    margin-top: 20rpx;
+    border-bottom: 1px solid #f6f6f6;
+}
+
+.share {
+    float: left;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background: rgb(247,230,230);
+    margin-top: 20rpx;
+    margin-left: 150rpx;
+}
+
+.go {
+    float: right;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    background: rgb(247,230,230);
+    margin-top: 20rpx;
+    margin-right: 150rpx;
+}
+
+.shareText {
+    float: left;
+    margin-left: -130rpx;
+    margin-top: 130rpx;
+    font-size: 28rpx;
+}
+
+.goText {
+    float: left;
+    margin-left: 210rpx;
+    margin-top: 10rpx;
+    font-size: 28rpx;
+}
+
+.textwidth {
+    width: 156rpx;
+}
+
+.flex-wrpcate {
+    display: flex;
+    padding: 5rpx 0rpx;
+}
+
+.flex {
+    flex-direction: row;
+}
+
+.flex .item {
+    flex: 1;
+}
+
+.delbtn {
+    margin-left: 80rpx;
+    background: #ffdf3e;
+}
+
+.service_selection {
+    padding: 15px 10px;
+    background: #fff;
+}
+
+.service_selection label {
+    background: #f0f1ec;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+.service_selection .is_checked {
+    border: 1px solid #ffdf3e;
+    color: #000;
+    background: #ffdf3e;
+}
+
+.picture_list {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.tab-h {
+    height: 110rpx;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    line-height: 110rpx;
+    background: #fff;
+    font-size: 16px;
+    white-space: nowrap;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.tab-item {
+    margin: 0 0rpx;
+    display: inline-block;
+    width: 25%;
+    text-align: center;
+    background: #fff;
+}
+
+.tab-item.active {
+    color: #ed7321;
+    position: relative;
+    font-weight: bold;
+    border-bottom: solid 3px #ed7321;
+}
+
+.tab-item.active:after {
+    content: "";
+    display: block;
+    height: 8rpx;
+    width: 100%;
+    background: #ed7321;
+    position: absolute;
+    bottom: 0;
+    left: 0rpx;
+    border-radius: 16rpx;
+}
+
+.item-ans {
+    width: 100%;
+    display: flex;
+    flex-grow: row no-wrap;
+    justify-content: space-between;
+    padding: 30rpx;
+    box-sizing: border-box;
+    height: 180rpx;
+    align-items: center;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+.toptab.active {
+    font-weight: bold;
+    color: #ed7321;
+    border-bottom: solid 3px #ed7321;
+}
+
+.tab-content {
+    margin-top: 110rpx;
+}
+
+.scoll-h {
+    height: 100%;
+}
+
+.diee {
+    line-height: 30rpx;
+}
+
+.diyi {
+    line-height: 30rpx;
+}
+
+.diyi2 {
+    line-height: 30rpx;
+}
+
+.diee2 {
+    line-height: 30rpx;
+}
+
+.flex-wrpcate {
+    display: flex;
+    padding: 5rpx 5rpx;
+}

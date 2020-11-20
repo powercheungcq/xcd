@@ -1,0 +1,90 @@
+{
+  "pages": [
+    "pages/member/index/index",
+    "pages/index/index",
+    "pages/livebroadcast/livebroadcast",
+    "pages/member/donate/donate",
+    "pages/member/share/share",
+    "pages/orderlist/category",
+    "pages/order/add/add",
+    "pages/order/list/list",
+    "pages/member/set/set",
+    "pages/member/integral/integral",
+    "pages/member/tixian/tixian",
+    "pages/member/topup/topup",
+    "pages/member/preferential/preferential",
+    "pages/member/envelope/envelope",
+    "pages/shop/index",
+    "pages/shop/details/details",
+    "pages/shop/cart/cart",
+    "pages/order/list/update/update",
+    "pages/member/share/xz/xz",
+    "pages/severice/severice",
+    "pages/member/share/edit",
+    "pages/shop/subOrder/subOrder",
+    "pages/severice/orderseverice",
+    "pages/member/preferential/orderpreferential",
+    "pages/shop/subOrder/shoporder",
+    "pages/member/preferential/shoppreferential",
+    "pages/web/web",
+    "pages/login/login",
+    "pages/dlogin/login",
+    "pages/order/chooseaddress/chooseaddress",
+    "pages/member/myewm/myewm",
+    "pages/member/fxuser/fxuser",
+    "pages/orderlist/time",
+    "pages/member/myewm/saveimg",
+    "pages/orderlist/xiangqing",
+    "pages/form/form",
+    "pages/member/set/agreement",
+    "pages/member/preferential/meprefer",
+    "pages/severice/pay",
+    "pages/member/feedback/feedback",
+    "pages/member/earnings/earnings"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#ffdf3e",
+    "navigationBarTitleText": "洗车帝",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "backgroundColor": "#fff",
+    "selectedColor": "#666",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "服务",
+        "iconPath": "images/icon_home.png",
+        "selectedIconPath": "images/icon_home_selected.png"
+      },
+      {
+        "pagePath": "pages/orderlist/category",
+        "text": "订单",
+        "iconPath": "images/icon_cate.png",
+        "selectedIconPath": "images/icon_cate_selected.png"
+      },
+      {
+        "pagePath": "pages/member/index/index",
+        "text": "我的",
+        "iconPath": "images/icon_member.png",
+        "selectedIconPath": "images/icon_member_selected.png"
+      }
+    ]
+  },
+  "plugins": {
+    "myPluginCalendar": {
+      "version": "2.2.1",
+      "provider": "wx6b6cb15df2836ebe"
+    }
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx03055a8787bf0015",
+    "wxff07ecaebf5c7ccf"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

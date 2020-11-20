@@ -1,0 +1,246 @@
+text {
+    display: flex;
+}
+
+view {
+    clear: both;
+}
+
+.titleTextHasWidth {
+    width: 160rpx;
+    line-height: 80rpx;
+    margin-left: 5rpx;
+}
+
+.titleTextHasWidths {
+    width: 160rpx;
+    line-height: 170rpx;
+    margin-left: 5rpx;
+}
+
+.fuxuan {
+    width: 450rpx;
+}
+
+.textarea {
+    font-size: 28rpx;
+    margin: 6%;
+    width: 400rpx;
+    height: 300rpx;
+}
+
+.kuandu {
+    display: block;
+    float: left;
+    width: 260rpx;
+}
+
+.xin {
+    line-height: 80rpx;
+    color: red;
+}
+
+.titleTextNoWidthLimited {
+    line-height: 50rpx;
+    margin-left: 15rpx;
+}
+
+.orderFocus {
+    width: 500rpx;
+    height: 80rpx;
+}
+
+.orderFocusr {
+    width: 230rpx;
+    height: 80rpx;
+}
+
+.orderFocusrtime {
+    width: 600rpx;
+    height: 80rpx;
+}
+
+.contentText1 {
+    font-size: 24rpx;
+    color: #666;
+    margin-top: 16rpx;
+}
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.drawer_box {
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    position: fixed;
+    top: 40%;
+    left: 0;
+    z-index: 1001;
+    background: #fefffe;
+    border-radius: 3px;
+}
+
+.drawer_title {
+    text-align: center;
+    height: 80rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.drawer_content {
+    width: 100%;
+    height: 71%;
+    overflow-y: scroll;
+}
+
+.sexGroup {
+    height: 80rpx;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 28rpx;
+}
+
+.carimg {
+    position: fixed;
+    right: 30rpx;
+}
+
+.cancel {
+    font-size: 28rpx;
+    color: #666;
+    position: fixed;
+    left: 30rpx;
+    top: 15rpx;
+}
+
+.choose {
+    font-size: 36rpx;
+    color: #000;
+    position: fixed;
+    left: 50%;
+    line-height: 70rpx;
+    margin-left: -60rpx;
+}
+
+.new .btnimg {
+    margin-top: 15rpx;
+}
+
+.picker .titleText {
+    width: 120rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+}
+
+.btnjs {
+    width: 100%;
+    height: 120rpx;
+    position: fixed;
+    right: 0;
+    background: #ffdf3e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sectiontHasWidth {
+    width: 200rpx;
+}
+
+.sectiontHasWidthend {
+    width: 200rpx;
+    text-align: center;
+}
+
+.inputcent {
+    text-align: left;
+}
+
+.lefttime {
+    margin-left: 20rpx;
+}
+
+.close {
+    font-size: 50rpx;
+    line-height: 45rpx;
+}
+
+.col1 {
+    line-height: 100rpx;
+}
+
+.otherfu {
+    width: 70rpx;
+}
+
+.otherfu1 {
+    width: 150rpx;
+}
+
+.bitian {
+    color: red;
+}
+
+.flex-wrpother {
+    display: flex;
+    padding: 10rpx 30rpx;
+    flex-wrap: wrap;
+}
+
+.flex-wrpAdd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex-wrpsettlement {
+    display: flex;
+    background: #ffdf3e;
+}
+
+.col8 {
+    margin-left: 80rpx;
+}
+
+.commentInfo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputText {
+    border: 1rpx #eee solid;
+    width: 98%;
+    height: 60rpx;
+    margin: 0;
+    padding-left: 5rpx;
+}
+
+.service_selection {
+    padding: 5rpx 5rpx;
+    background: #fff;
+}
+
+.service_selection label {
+    background: #f0f1ec;
+    padding: 15rpx 10rpx;
+    font-size: 10px;
+    margin-left: 10rpx;
+    border-radius: 4px;
+}
+
+.service_selection .is_checked {
+    border: 1px solid #ffdf3e;
+    color: #000;
+    background: #ffdf3e;
+}

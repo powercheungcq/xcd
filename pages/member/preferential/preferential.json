@@ -1,0 +1,20 @@
+{
+    "navigationBarTitleText": "我的优惠券",
+    "card": {
+        "card_type": "MEMBER_CARD",
+        "member_card": {
+            "base_info": {
+                "custom_url_name": "立即使用",
+                "custom_url": "http://www.qq.com",
+                "custom_app_brand_user_name": "gh_1470a19138ba@app",
+                "custom_app_brand_pass": "API/cardPage",
+                "custom_url_sub_title": "6个汉字tips",
+                "promotion_url_name": "更多优惠",
+                "promotion_url": "http://www.qq.com",
+                "promotion_app_brand_user_name": "gh_1470a19138ba@app",
+                "promotion_app_brand_pass": "API/cardPage"
+            }
+        }
+    },
+    "usingComponents": {}
+}

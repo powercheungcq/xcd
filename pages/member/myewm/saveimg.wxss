@@ -1,0 +1,27 @@
+view {
+    background: none;
+}
+
+.save {
+    background: #ffdf3e;
+    width: 96%;
+    position: fixed;
+    bottom: 120rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    left: 2%;
+}
+
+.aa {
+    background: #ffdf3e;
+    width: 96%;
+    position: fixed;
+    bottom: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    left: 2%;
+}
+
+button::after {
+    border: none;
+}

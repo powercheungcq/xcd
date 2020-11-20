@@ -1,0 +1,29 @@
+.contenttext {
+    font-size: 28rpx;
+    color: #000;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 55rpx;
+    margin-top: 10rpx;
+}
+
+.contenttexts {
+    font-size: 28rpx;
+    color: #000;
+    text-align: left;
+    text-indent: 2em;
+    line-height: 55rpx;
+    margin-top: 10rpx;
+}
+
+.xiexi {
+    padding: 10rpx;
+}
+
+.top1 {
+    padding-left: 15rpx;
+}
+
+.top2 {
+    padding-left: 15rpx;
+}

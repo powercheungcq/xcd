@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "PNInput": "plugin://wxd60c33af8864b8bd/plate-num-input"
+    },
+    "navigationBarTitleText": "新增车辆"
+}

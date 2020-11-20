@@ -1,0 +1,112 @@
+<view wx:for="{{shoplist}}">
+    <view catchtap="goDeatailEvent" class="orderArea">
+        <view class="oneHeight flex-wrp">
+            <view class="col2 flex-wrp">
+                <view class="shopwidth">
+                    <text class="titleText">商品名：</text>
+                </view>
+                <view>
+                    <text class="contentText">{{item.proName}}</text>
+                </view>
+            </view>
+            <view class="col2">
+                <text class="titleText">数量：</text>
+                <text class="contentText">{{item.proNum}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrp">
+            <view class="shopwidth">
+                <text class="titleText">总价：</text>
+            </view>
+            <view>
+                <text class="contentText">{{item.proTotalPrice}}</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrp">
+            <view class="shopwidth">
+                <text class="titleText">联系人：</text>
+            </view>
+            <view>
+                <text class="contentText">张三</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrp">
+            <view class="shopwidth">
+                <text class="titleText">联系电话：</text>
+            </view>
+            <view>
+                <text class="contentText">18262206125</text>
+            </view>
+        </view>
+        <view class="oneHeight flex-wrp">
+            <view class="shopwidth">
+                <text class="titleText">地址：</text>
+            </view>
+            <view>
+                <text class="contentText">江阴市南闸镇绿城锦园对面</text>
+            </view>
+        </view>
+        <view class="orderCartime oneHeight">
+            <text class="contentText">下单时间：2018/08/30 14:20</text>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view catchtap="goDeatailEvent" class="orderArea splitArea">
+        <view class="oneHeight flex-wrp">
+            <view class="col8">
+                <text class="titleText">红包</text>
+            </view>
+            <view class="col4 textright">
+                <text class="contentText">暂无可用</text>
+            </view>
+        </view>
+        <view class="lineView"></view>
+        <view class="oneHeight flex-wrp">
+            <view bindtap="toMyPackage" class="col8">
+                <text class="titleText">优惠券</text>
+            </view>
+            <view bindtap="toMyPackage" class="col4 textright">
+                <text class="contentText">{{count}}张可用</text>
+            </view>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view class="flex-wrp mebtop">
+        <view></view>
+        <view>
+            <radio-group bindchange="washbtn" class="">
+                <label class="flex-wrp">
+                    <view class="oneHeight">
+                        <radio value="{{item.price}}"></radio>
+                    </view>
+                    <view class="oneHeight">
+                        <text class="titleText">使用会员卡支付</text>
+                    </view>
+                    <view class="balance oneHeight">
+                        <text class="contentText">余额：200</text>
+                    </view>
+                    <view class="topUp oneHeight">
+                        <text class="contentText">充值</text>
+                    </view>
+                </label>
+            </radio-group>
+        </view>
+    </view>
+    <view class=" weui-btn-area">
+        <view class="total">
+            <text>{{item.proTotalPrice}}(已优惠{{price}} )</text>
+        </view>
+        <view class="btnjs">
+            <text bindtap="tjbtn">立即支付</text>
+        </view>
+    </view>
+    <view class="lineView"></view>
+    <view bindtap="homebtn" class="homePage">
+        <image src="../../../images/sy.png" style="height:50rpx; width:50rpx;"></image>
+    </view>
+    <navigator url="../cart/cart">
+        <view class="cartPage">
+            <image src="../../../images/guc.png" style="height:60rpx; width:60rpx;"></image>
+        </view>
+    </navigator>
+</view>

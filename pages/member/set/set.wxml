@@ -1,0 +1,15 @@
+<view class="setup-list">
+    <navigator url="">
+        <text>关于洗车帝</text>
+        <image src=""></image>
+    </navigator>
+    <navigator url="agreement">
+        <text>服务协议</text>
+        <image src=""></image>
+    </navigator>
+    <navigator url="">
+        <text>版本</text>
+        <text class="banben">当前版本1.0.0.5</text>
+        <text class="banben">最新版本{{banebn}}</text>
+    </navigator>
+</view>

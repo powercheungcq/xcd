@@ -1,0 +1,62 @@
+.tixianjine {
+    display: block;
+    margin-top: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.orderBTN {
+    background: #ffdf3e;
+    width: 98%;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top: 100rpx;
+    border-radius: 10rpx;
+}
+
+.integralTop {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 20rpx;
+    height: 255rpx;
+    background: #ffdf3e;
+    border-radius: 20rpx;
+}
+
+.integralzn,.integraldigital,.integralstore,.instructions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 30rpx;
+    background: #ffdf3e;
+    border-radius: 20rpx;
+}
+
+.instructions {
+    font-size: 26rpx;
+    color: #666;
+}
+
+.titleText {
+    display: flex;
+    justify-content: center;
+    font-size: 36rpx;
+}
+
+.mytixian {
+    width: 95%;
+    font-size: 28rpx;
+    margin-left: 2.5%;
+    line-height: 60rpx;
+    height: 60rpx;
+}
+
+.mytixian>view {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    float: left;
+    text-align: center;
+    width: 33.33333%;
+}

@@ -1,0 +1,8 @@
+<view class="show">
+    <view class="specific">
+        <image src="https://www.smxic.com/uploads/workimages/{{imglist0}}" style="width:720rpx; height:900rpx; margin-left:15rpx; margin-top:10rpx;"></image>
+        <image src="https://www.smxic.com/uploads/workimages/{{imglist1}}" style="width:720rpx; height:900rpx; margin-left:15rpx;margin-top:10rpx;"></image>
+        <image src="https://www.smxic.com/uploads/workimages/{{imglist2}}" style="width:720rpx; height:900rpx;margin-left:15rpx;margin-top:10rpx;"></image>
+        <image src="https://www.smxic.com/uploads/workimages/{{imglist3}}" style="width:720rpx; height:900rpx;margin-left:15rpx;margin-top:10rpx;"></image>
+    </view>
+</view>

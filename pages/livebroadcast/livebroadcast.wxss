@@ -1,0 +1,94 @@
+view,text {
+    padding: 0;
+    margin: 0;
+}
+
+.box {
+    padding-bottom: 40rpx;
+}
+
+.livebox {
+    margin-left: 40rpx;
+    margin-right: 40rpx;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+}
+
+.livebox>text {
+    display: block;
+    height: 60rpx;
+    line-height: 60rpx;
+    transform: translateY(50rpx);
+}
+
+.livebox>view {
+    width: 50%;
+    float: left;
+    height: 320rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 64rpx;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0);
+}
+
+.livebox>view>view {
+    width: 320rpx;
+    height: 320rpx;
+    float: left;
+    position: relative;
+    color: white;
+    background-color: rgba(0,0,0,0);
+}
+
+.livebox>view>view:nth-child(even) {
+    float: right;
+}
+
+.livecodename {
+    position: absolute;
+    width: 80%;
+    top: 32rpx;
+    font-size: 28rpx;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: rgba(0,0,0,0);
+    z-index: 666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.fiexbox {
+    border-radius: 20rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 66;
+    background-color: rgba(0,0,0,0.3);
+}
+
+.livename {
+    position: absolute;
+    z-index: 6666;
+    width: 80%;
+    font-weight: 400;
+    color: rgba(255,255,255,1);
+    background-color: rgba(0,0,0,0);
+    font-size: 20rpx;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 26rpx;
+}
+
+.livebox>view>view>image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 20rpx;
+    width: 100%;
+    height: 100%;
+}

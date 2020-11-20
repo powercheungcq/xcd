@@ -1,0 +1,115 @@
+.line {
+    border-bottom: 1px solid #F1f3f2;
+}
+
+.qdzj {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10rpx 0rpx;
+}
+
+.titleTextHasWidths {
+    display: block;
+    width: 100rpx;
+    font-size: 28rpx;
+    color: #000;
+    padding-left: 5rpx;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+button::after {
+    border: none;
+}
+
+.flex-wrpother {
+    display: flex;
+    padding: 10rpx 0rpx;
+    flex-wrap: wrap;
+    margin-left: -10rpx;
+}
+
+.cxing {
+    margin-left: -20rpx;
+}
+
+.qdzj button {
+    width: 90%;
+    background: #ffdf3e;
+    color: #666;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titleText {
+    display: block;
+    width: 130rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-left: 5rpx;
+}
+
+.orderFocus {
+    width: 560rpx;
+    height: 80rpx;
+}
+
+.orderFocusr {
+    width: 200rpx;
+    height: 80rpx;
+}
+
+.radio {
+    height: 120rpx;
+}
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.drawer_box {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    background: #fefffe;
+    border-radius: 3px;
+}
+
+.drawer_title {
+    text-align: center;
+    height: 80rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.drawer_content {
+    width: 100%;
+    height: 71%;
+    overflow-y: scroll;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}

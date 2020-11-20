@@ -1,0 +1,9 @@
+.title {
+    width: 100%;
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+page {
+    background: #fff;
+}

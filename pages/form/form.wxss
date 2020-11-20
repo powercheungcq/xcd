@@ -1,0 +1,33 @@
+.titleText {
+    font-size: 20rpx;
+    display: block;
+    background: #ffdf3e;
+    width: 96%;
+    height: 80rpx;
+    line-height: 120rpx;
+    text-align: center;
+    margin-left: 15rpx;
+    margin-top: 10rpx;
+    border-radius: 110rpx;
+}
+
+.titleText1 {
+    font-size: 40rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+}
+
+page {
+    background: #fff;
+}
+
+.title {
+    margin-top: 60rpx;
+    margin-left: 235rpx;
+    color: #CDC9A5;
+}
+
+button::after {
+    border: none;
+}

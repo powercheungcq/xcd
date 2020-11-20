@@ -1,0 +1,34 @@
+page {
+    background: #fff;
+}
+
+.pagebox {
+    width: 90%;
+    overflow: hidden;
+    margin: 40rpx auto;
+}
+
+.pagebox>button {
+    width: 45%;
+    border-radius: 110rpx;
+    height: 80rpx;
+    background-color: #909399;
+    float: left;
+    color: #fff;
+}
+
+.pagebox>button:nth-child(2) {
+    float: right;
+    color: black;
+    background: #ffdf3e;
+}
+
+.title {
+    margin-top: 60rpx;
+    margin-left: 235rpx;
+    color: #CDC9A5;
+}
+
+button::after {
+    border: none;
+}

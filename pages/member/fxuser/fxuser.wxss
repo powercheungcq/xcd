@@ -1,0 +1,172 @@
+view {
+    background: #fff;
+    padding: 0rpx 0rpx;
+    margin: 0rpx;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    overflow-y: scroll;
+}
+
+.avatar {
+    width: 100%;
+    height: 140rpx;
+    line-height: 140rpx;
+    position: relative;
+}
+
+.avatar::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #eee;
+}
+
+.fenxiang {
+    height: 80rpx;
+    line-height: 80rpx;
+    width: 100%;
+    padding-left: 10rpx;
+    border-bottom: 1rpx solid #eee;
+}
+
+.nickName {
+    width: 100%;
+    height: 100rpx;
+    line-height: 90rpx;
+    vertical-align: middle;
+    position: relative;
+}
+
+.nickName::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #f2f2f2;
+}
+
+.sex {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    position: relative;
+}
+
+.sex::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #f2f2f2;
+}
+
+.area {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    position: relative;
+}
+
+.area::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #f2f2f2;
+}
+
+.signature {
+    width: 100%;
+    height: 90rpx;
+    line-height: 90rpx;
+    position: relative;
+}
+
+.signature::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    transform: scaleY(.5);
+    background-color: #f2f2f2;
+}
+
+.container text {
+    float: left;
+    vertical-align: middle;
+    margin-left: 10rpx;
+}
+
+.container .real {
+    float: right;
+    margin-right: 20rpx;
+    vertical-align: middle;
+}
+
+.a {
+    float: right;
+    width: 100rpx;
+    height: 90rpx;
+    margin-top: 25rpx;
+    margin-right: 30rpx;
+    border-radius: 50%;
+}
+
+.n {
+    float: right;
+    width: 50rpx;
+    height: 100rpx;
+    margin-top: 25rpx;
+    vertical-align: middle;
+}
+
+.xiugai {
+    margin-top: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.xiugai button {
+    width: 90%;
+    height: 80rpx;
+    line-height: 80rpx;
+    background: #ffdf3e;
+    font-size: 28rpx;
+}
+
+.lefttext {
+    width: 360rpx;
+    color: #666;
+    font-size: 26rpx;
+    margin-left: 50rpx;
+    padding-top: 6rpx;
+}
+
+.rfttext {
+    color: #666;
+    font-size: 26rpx;
+    margin-right: 10rpx;
+    padding-top: 6rpx;
+}
+
+.titleText {
+    margin-left: 10rpx;
+}

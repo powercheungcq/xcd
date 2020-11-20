@@ -1,0 +1,46 @@
+view {
+    background: #fff;
+    padding: 0rpx 0rpx;
+    margin: 0rpx;
+}
+
+.setup-list {
+    padding: 0 10rpx;
+}
+
+.setup-list navigator {
+    display: flex;
+    justify-content: space-between;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #e8e8e8;
+}
+
+.setup-list navigator text {
+    font-size: 28rpx;
+}
+
+.setup-list navigator image {
+    height: 35rpx;
+    width: 35rpx;
+}
+
+.quit {
+    padding: 30rpx 10rpx;
+}
+
+.quit text {
+    width: 100%;
+    padding: 18rpx 0;
+    background-color: #ffdf3e;
+    display: flex;
+    font-size: 28rpx;
+    color: #666;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10rpx;
+}
+
+.banben {
+    color: #808080;
+    font-size: 14rpx;
+}

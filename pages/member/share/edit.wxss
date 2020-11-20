@@ -1,0 +1,163 @@
+view {
+    background: #fff;
+    padding: 0rpx 0rpx;
+    margin: 0rpx;
+}
+
+.titleText {
+    display: block;
+    width: 100rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-left: 5rpx;
+}
+
+titleText1 {
+    width: 120rpx;
+    line-height: 80rpx;
+    height: 80rpx;
+    margin-left: 5rpx;
+}
+
+.titleTextHasWidths {
+    display: block;
+    width: 100rpx;
+    font-size: 28rpx;
+    color: #000;
+    padding-left: 5rpx;
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+button::after {
+    border: none;
+}
+
+.flex-wrpother {
+    display: flex;
+    padding: 10rpx 0rpx;
+    flex-wrap: wrap;
+    margin-left: -10rpx;
+}
+
+.cxing {
+    margin-left: -20rpx;
+}
+
+.inputInfo {
+    width: 500rpx;
+    height: 80rpx;
+}
+
+.inputInfo1 {
+    width: 150rpx;
+    height: 80rpx;
+}
+
+.infoLine {
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.save {
+    margin-top: 20rpx;
+    background: #ffdf3e;
+    display: flex;
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.del {
+    background: #ffdf3e;
+    display: flex;
+    width: 90%;
+    height: 80rpx;
+    border-radius: 10rpx;
+    margin-left: 5%;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+}
+
+.save button {
+    margin-top: 20rpx;
+    background: #ffdf3e;
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+    color: #000;
+}
+
+.del button {
+    margin-top: 20rpx;
+    background: #ffdf3e;
+    display: flex;
+    width: 100%;
+    height: 80rpx;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20rpx;
+    color: #000;
+}
+
+.radio {
+    height: 120rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+.drawer_box {
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1001;
+    background: #fefffe;
+    border-radius: 3px;
+}
+
+.drawer_title {
+    text-align: center;
+    height: 80rpx;
+    border-bottom: 1px solid #ccc;
+}
+
+.drawer_content {
+    width: 100%;
+    height: 71%;
+    overflow-y: scroll;
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+}

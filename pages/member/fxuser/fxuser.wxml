@@ -1,0 +1,16 @@
+<view class="fenxiang">
+    <text class="titleText"> 分享人数：{{count}}人</text>
+</view>
+<view class="setup-list" wx:if="{{fxlist!==''}}" wx:for="{{fxlist}}">
+    <view class="nickName flex-wrp">
+        <view>
+            <text class="titleText">微信名</text>
+        </view>
+        <view class="lefttext">
+            <text> {{item.name}}</text>
+        </view>
+        <view class="rfttext">
+            <text> {{item.time}}</text>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,7 @@
+<view hidden="{{hidden}}">
+    <image src="{{imgurls}}" style="width:100%; height:1100rpx;"></image>
+    <button bindtap="save" class="save">保存图片到相册</button>
+</view>
+<button class="aa" hoverClass="other-button-hover" id="shareBtn" openType="share">
+分享
+</button>

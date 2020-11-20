@@ -1,0 +1,2 @@
+<canvas canvasId="shareCanvas" class="beijing" style="width:720rpx;height:1100rpx;"></canvas>
+<button bindtap="share_quan" class="share_quan">生成图片</button>

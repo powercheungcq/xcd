@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "yycalendar": "plugin://wx6b6cb15df2836ebe/yycalendar"
+    },
+    "navigationBarTitleText": "填写订单"
+}

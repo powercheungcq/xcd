@@ -1,0 +1,27 @@
+<view class="integralTop">
+    <view class="integralzn">
+        <text class="titleText">可使用金额</text>
+    </view>
+    <view class="integraldigital">
+        <text class="buttonText">￥{{sy}}元</text>
+    </view>
+    <view class="instructions">不含未到账收益</view>
+</view>
+<view>
+    <view class="mytixian">
+        <view>时间</view>
+        <view>金额</view>
+        <view>状态</view>
+    </view>
+    <view class="mytixian">
+        <view>234234234</view>
+        <view>金23423423额</view>
+        <view>234324</view>
+    </view>
+    <view class="mytixian">
+        <view>32423432342</view>
+        <view>金234342342342额</view>
+        <view>状234342态</view>
+    </view>
+</view>
+<button class="orderBTN">申请提现</button>

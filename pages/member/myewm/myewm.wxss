@@ -1,0 +1,21 @@
+.img {
+    margin-left: 16%;
+}
+
+.share_quan {
+    background: #ffdf3e;
+    width: 96%;
+    position: fixed;
+    bottom: 20rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    left: 2%;
+}
+
+.beijing {
+    margin-left: 2%;
+}
+
+button::after {
+    border: none;
+}

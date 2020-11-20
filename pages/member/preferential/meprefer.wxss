@@ -1,0 +1,295 @@
+.tit {
+    width: 100%;
+    height: 72rpx;
+    display: flex;
+    justify-content: space-between;
+    color: #333;
+    box-sizing: border-box;
+    padding: 0 6%;
+    font-size: 28rpx;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+}
+
+.tit button {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0;
+    text-align: center;
+    background: none;
+    margin: 0;
+    font-size: 28rpx;
+    color: #868686;
+    line-height: 60rpx;
+    border: 1px solid transparent;
+}
+
+.tit button::after {
+    border: 1px solid transparent;
+}
+
+.tit button::hover {
+    border: none;
+}
+
+.tit button.on {
+    border-bottom: 2px solid #EB6A45;
+    color: #EB6A45;
+    background: none;
+    border-radius: 0;
+}
+
+.list {
+}
+
+.list_one {
+    border-top: 10px solid #F2F2F2;
+    padding-top: 20rpx;
+}
+
+.li_time {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F7F7F7;
+    padding-bottom: 20rpx;
+}
+
+.li_time view {
+    color: #060606;
+    font-size: 30rpx;
+    font-weight: bold;
+}
+
+.li_time .li_type {
+    color: #fff;
+    font-size: 24rpx;
+    border: 1px solid transparent;
+    margin: 0;
+    padding: 5rpx 20rpx;
+    border-radius: 6rpx;
+    font-weight: normal;
+}
+
+.li_name {
+    margin: 10rpx;
+}
+
+.li_name text {
+    color: #919191;
+    font-size: 28rpx;
+}
+
+.li_adree {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+
+.li_adree text {
+    color: #000000;
+    font-size: 30rpx;
+}
+
+.li_left {
+    display: flex;
+    width: 75%;
+}
+
+.li_adree .li_dian {
+    background: #EE8432;
+    width: 16rpx;
+    height: 16rpx;
+    border-radius: 50%;
+    margin-right: 20rpx;
+    margin-top: 12rpx;
+}
+
+.li_adree .li_dis {
+    color: #4F8AEE;
+    font-size: 24rpx;
+}
+
+.li_qu {
+    margin: 20rpx 0;
+}
+
+.li_qu text {
+    color: #717171;
+    font-size: 22rpx;
+    border: 1px solid #E4E4E4;
+    padding: 2px 10rpx;
+    border-radius: 6rpx;
+}
+
+.li_btn {
+    color: #fff;
+    background: #4F8AEE;
+    border-radius: 10rpx;
+    font-size: 30rpx;
+    margin: 20rpx 0;
+}
+
+.list_none {
+    font-size: 28rpx;
+    color: #C8C8C8;
+    text-align: center;
+    margin-top: 40rpx;
+}
+
+.list {
+    background: #fff;
+    padding: 20rpx 20rpx 40rpx 10rpx;
+}
+
+.list_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list_left {
+    display: flex;
+    border-bottom: 3px solid #F6F6F6;
+    padding-bottom: 20rpx;
+    margin-bottom: 30rpx;
+}
+
+.list_main {
+    margin: 20rpx;
+}
+
+.list_name {
+    font-size: 30rpx;
+    color: #131718;
+    font-weight: bold;
+}
+
+.list_adress {
+    font-size: 26rpx;
+    color: #5F6062;
+    margin: 6rpx 0;
+}
+
+.map {
+    width: 350rpx;
+    height: 40rpx;
+    overflow: hidden;
+}
+
+.list_pay {
+    font-size: 24rpx;
+    color: #020202;
+}
+
+.list_money {
+    font-size: 38rpx;
+    color: #E9432D;
+    font-weight: bold;
+}
+
+.list_money text {
+    font-size: 28rpx;
+    color: #E9432D;
+}
+
+.li_all {
+    width: 68%;
+}
+
+.li_middle {
+    display: flex;
+    justify-content: space-between;
+}
+
+.li_middle text {
+    font-size: 24rpx;
+    color: #636060;
+}
+
+.li_middle view {
+    font-size: 24rpx;
+    color: #636060;
+}
+
+.li_bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.li_bottom button {
+    color: #5F6062;
+    font-size: 22rpx;
+    background: #fff;
+    padding-left: 10rpx;
+    padding-right: 10rpx;
+    margin: 0;
+    height: 46rpx;
+    line-height: 46rpx;
+}
+
+.list_none {
+    color: #5F6062;
+    font-size: 26rpx;
+    text-align: center;
+    margin-top: 50rpx;
+}
+
+.back {
+    font-size: 26rpx;
+    width: 20%;
+    text-align: center;
+}
+
+.genfade {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+}
+
+.genlight {
+    width: 100%;
+    background: #fff;
+    height: auto;
+    position: relative;
+    z-index: 11;
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.ge1 {
+    text-align: center;
+    font-size: 28rpx;
+    color: #333;
+    padding: 12rpx 30rpx;
+    font-weight: bold;
+}
+
+.giimg {
+    width: 101%;
+    float: left;
+    margin: 0;
+}
+
+.gi1 {
+    padding: 20rpx 5%;
+}
+
+.gi2 {
+    font-size: 28rpx;
+    color: #333;
+}
+
+.xuzhe {
+    width: 100%;
+    background: #fff;
+    height: 78rpx;
+    z-index: 11;
+    border-radius: 3px;
+    overflow: hidden;
+    font-size: 28rpx;
+    margin-top: 6%;
+}
